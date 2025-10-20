@@ -1,5 +1,3 @@
-// Main.js (Versi yang sudah diperbaiki)
-
 // VARIABEL GLOBAL
 let playerName = '';
 let playerLevel = '';
@@ -214,4 +212,5 @@ document.getElementById('btn-share-wa').addEventListener('click', () => {
 // Mulai aplikasi
 document.addEventListener('DOMContentLoaded', () => {
     showPage('page-start');
+
 });
