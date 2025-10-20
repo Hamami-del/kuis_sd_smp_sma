@@ -1,9 +1,15 @@
+// === FIREBASE SETUP ===
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 import { firebaseConfig } from "./firebaseConfig.js";
 
+// Inisialisasi Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 
+// ==========================================
 // VARIABEL GLOBAL
+// ==========================================
 let playerName = '';
 let playerLevel = '';
 let currentSubject = '';
@@ -14,7 +20,9 @@ const audioCorrect = document.getElementById('audioCorrect');
 const audioWrong = document.getElementById('audioWrong');
 
 
-// Fungsi untuk navigasi antar halaman
+// ==========================================
+// FUNGSI NAVIGASI ANTAR HALAMAN
+// ==========================================
 function showPage(pageId) {
     document.querySelectorAll('.page').forEach(page => {
         page.style.display = 'none';
@@ -22,10 +30,10 @@ function showPage(pageId) {
     document.getElementById(pageId).style.display = 'block';
 }
 
-// ----------------------------------------------------
-// LOGIKA UMUM & DONASI
-// ----------------------------------------------------
 
+// ==========================================
+// LOGIKA UMUM & DONASI
+// ==========================================
 document.querySelectorAll('.btn-donasi').forEach(btn => {
     btn.addEventListener('click', () => {
         document.getElementById('modal-donasi').style.display = 'flex';
@@ -43,21 +51,17 @@ document.getElementById('btn-salin-dana').addEventListener('click', () => {
 });
 
 
-// ----------------------------------------------------
+// ==========================================
 // HALAMAN 1: START
-// ----------------------------------------------------
-
-// Tangani pemilihan Tingkat Sekolah
+// ==========================================
 document.querySelectorAll('.level-btn').forEach(btn => {
     btn.addEventListener('click', function() {
         playerLevel = this.dataset.level;
-        // Visualisasi tombol terpilih (opsional)
         document.querySelectorAll('.level-btn').forEach(b => b.classList.remove('selected'));
         this.classList.add('selected');
     });
 });
 
-// Tombol NEXT (pindah ke Halaman 2)
 document.getElementById('btn-next-level').addEventListener('click', () => {
     playerName = document.getElementById('player-name-input').value.trim();
 
@@ -69,31 +73,19 @@ document.getElementById('btn-next-level').addEventListener('click', () => {
         alert('Mohon pilih Tingkat Sekolah!');
         return;
     }
-    
-    // Simpan nama pemain ke Firebase (Logika Firebase perlu ditambahkan)
-// === FIREBASE SETUP ===
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
-import { firebaseConfig } from "./firebaseConfig.js";
 
-// Inisialisasi Firebase
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
-    
-    // Tampilkan Halaman 2 (Pemilihan Mata Pelajaran)
     setupSubjectPage(playerLevel);
     showPage('page-subject');
 });
 
 
-// ----------------------------------------------------
+// ==========================================
 // HALAMAN 2: PEMILIHAN MATA PELAJARAN
-// ----------------------------------------------------
-
+// ==========================================
 function setupSubjectPage(level) {
     document.getElementById('current-level-display').textContent = `Tingkat: ${level}`;
     const subjectList = document.getElementById('subject-list');
-    subjectList.innerHTML = ''; // Bersihkan tombol lama
+    subjectList.innerHTML = '';
 
     const subjects = QUIZ_DATA[level];
     if (subjects) {
@@ -102,12 +94,10 @@ function setupSubjectPage(level) {
             button.className = 'subject-btn';
             button.textContent = subject;
             button.setAttribute('data-subject', subject);
-            
             button.addEventListener('click', function() {
                 currentSubject = this.dataset.subject;
                 startQuiz(level, currentSubject);
             });
-
             subjectList.appendChild(button);
         });
     } else {
@@ -116,17 +106,13 @@ function setupSubjectPage(level) {
 }
 
 
-// ----------------------------------------------------
+// ==========================================
 // HALAMAN 3: KUIS
-// ----------------------------------------------------
-
+// ==========================================
 function startQuiz(level, subject) {
     quizQuestions = QUIZ_DATA[level][subject];
     currentQuestionIndex = 0;
     currentScore = 0;
-    
-    
-
     showPage('page-quiz');
     loadQuestion();
 }
@@ -139,10 +125,10 @@ function loadQuestion() {
 
     const q = quizQuestions[currentQuestionIndex];
     document.getElementById('quiz-question-text').textContent = q.question;
-    document.getElementById('quiz-character').textContent = '🙂'; // Ekspresi default
+    document.getElementById('quiz-character').textContent = '🙂';
 
     const optionsDiv = document.getElementById('quiz-options');
-    optionsDiv.innerHTML = ''; // Bersihkan pilihan lama
+    optionsDiv.innerHTML = '';
 
     q.options.forEach(option => {
         const button = document.createElement('button');
@@ -154,55 +140,34 @@ function loadQuestion() {
 }
 
 function checkAnswer(button, selectedOption, correctAnswer) {
-    // Nonaktifkan semua tombol pilihan setelah satu dipilih
     document.querySelectorAll('.option-btn').forEach(btn => btn.disabled = true);
 
     if (selectedOption === correctAnswer) {
-        currentScore += 10; // Tambah skor
+        currentScore += 10;
         document.getElementById('current-score').textContent = currentScore;
-        document.getElementById('quiz-character').textContent = '😀'; // Tersenyum
+        document.getElementById('quiz-character').textContent = '😀';
         button.classList.add('correct');
+        if (audioCorrect) { audioCorrect.currentTime = 0; audioCorrect.play(); }
     } else {
-        document.getElementById('quiz-character').textContent = '🤪'; // Cemberut
+        document.getElementById('quiz-character').textContent = '🤪';
         button.classList.add('wrong');
-        // Tandai jawaban yang benar
         document.querySelectorAll('.option-btn').forEach(btn => {
-            if (btn.textContent === correctAnswer) {
-                btn.classList.add('correct');
-            }
+            if (btn.textContent === correctAnswer) btn.classList.add('correct');
         });
+        if (audioWrong) { audioWrong.currentTime = 0; audioWrong.play(); }
     }
-// ... dalam checkAnswer function ...
 
-if (selectedOption === correctAnswer) {
-    // ...
-    if (audioCorrect) {
-        audioCorrect.currentTime = 0; // Reset
-        audioCorrect.play(); // PLAY
-    }
-    // ...
-} else {
-    // ...
-    if (audioWrong) {
-        audioWrong.currentTime = 0; // Reset
-        audioWrong.play(); // PLAY
-    }
-    // ...
-}
-    // Lanjut ke pertanyaan berikutnya setelah jeda singkat
     setTimeout(() => {
         currentQuestionIndex++;
         loadQuestion();
-    }, 1500); 
+    }, 1500);
 }
 
-// Tombol Selesai Kuis
-document.getElementById('btn-end-quiz').addEventListener('click', finishQuiz);
 
-
-function finishQuiz() {
-    async function finishQuiz() {
-    // Simpan data ke Firebase
+// ==========================================
+// SELESAI KUIS
+// ==========================================
+async function finishQuiz() {
     try {
         const playerRef = ref(db, "players");
         await push(playerRef, {
@@ -217,32 +182,26 @@ function finishQuiz() {
         console.error("Gagal menyimpan ke Firebase:", error);
     }
 
-    // Tampilkan Popup Selesai Kuis
     document.getElementById('final-player-name').textContent = playerName;
     document.getElementById('final-score-display').textContent = currentScore;
     document.getElementById('modal-finish').style.display = 'flex';
-
 }
 
 document.querySelector('#modal-finish .close-button').addEventListener('click', () => {
     document.getElementById('modal-finish').style.display = 'none';
-    // Kembali ke halaman awal setelah kuis selesai
     showPage('page-start');
 });
 
 document.getElementById('btn-share-wa').addEventListener('click', () => {
-    const message = `Halo! Saya ${playerName} baru saja menyelesaikan kuis ${currentSubject} tingkat ${playerLevel} dan mendapatkan skor ${currentScore}! Ayo ikutan main https://hamami-del.github.io/kuis_sd_smp_sma/`;
+    const message = `Halo! Saya ${playerName} baru saja menyelesaikan kuis ${currentSubject} tingkat ${playerLevel} dan mendapatkan skor ${currentScore}! Ayo ikutan main di https://hamami-del.github.io/kuis_sd_smp_sma/`;
     const waLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
     window.open(waLink, '_blank');
 });
 
 
-// Mulai aplikasi
+// ==========================================
+// INISIALISASI APP
+// ==========================================
 document.addEventListener('DOMContentLoaded', () => {
     showPage('page-start');
-
 });
-
-
-
-
