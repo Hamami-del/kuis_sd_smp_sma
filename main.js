@@ -5,6 +5,8 @@ let currentSubject = '';
 let currentScore = 0;
 let currentQuestionIndex = 0;
 let quizQuestions = [];
+const audioCorrect = document.getElementById('audioCorrect');
+const audioWrong = document.getElementById('audioWrong');
 
 
 // Fungsi untuk navigasi antar halaman
@@ -110,8 +112,7 @@ function startQuiz(level, subject) {
     currentQuestionIndex = 0;
     currentScore = 0;
     
-    document.getElementById('player-name-display').textContent = playerName;
-    document.getElementById('current-score').textContent = currentScore;
+    
 
     showPage('page-quiz');
     loadQuestion();
@@ -214,3 +215,4 @@ document.addEventListener('DOMContentLoaded', () => {
     showPage('page-start');
 
 });
+
