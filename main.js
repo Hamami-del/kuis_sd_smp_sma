@@ -66,6 +66,14 @@ document.getElementById('btn-next-level').addEventListener('click', () => {
     }
     
     // Simpan nama pemain ke Firebase (Logika Firebase perlu ditambahkan)
+// === FIREBASE SETUP ===
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+import { firebaseConfig } from "./firebaseConfig.js";
+
+// Inisialisasi Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
     
     // Tampilkan Halaman 2 (Pemilihan Mata Pelajaran)
     setupSubjectPage(playerLevel);
@@ -188,13 +196,27 @@ document.getElementById('btn-end-quiz').addEventListener('click', finishQuiz);
 
 
 function finishQuiz() {
-    // Simpan data akhir ke Firebase (Logika Firebase perlu ditambahkan)
-    // score, tingkat sekolah, mata pelajaran
-    
+    async function finishQuiz() {
+    // Simpan data ke Firebase
+    try {
+        const playerRef = ref(db, "players");
+        await push(playerRef, {
+            name: playerName,
+            level: playerLevel,
+            subject: currentSubject,
+            score: currentScore,
+            date: new Date().toISOString()
+        });
+        console.log("Data tersimpan ke Firebase!");
+    } catch (error) {
+        console.error("Gagal menyimpan ke Firebase:", error);
+    }
+
     // Tampilkan Popup Selesai Kuis
     document.getElementById('final-player-name').textContent = playerName;
     document.getElementById('final-score-display').textContent = currentScore;
     document.getElementById('modal-finish').style.display = 'flex';
+
 }
 
 document.querySelector('#modal-finish .close-button').addEventListener('click', () => {
@@ -215,4 +237,5 @@ document.addEventListener('DOMContentLoaded', () => {
     showPage('page-start');
 
 });
+
 
