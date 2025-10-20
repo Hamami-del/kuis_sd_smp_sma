@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Pintar by Hamami</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <div id="modal-donasi" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Dukunganmu Sangat Berharga Untuk Meningkatkan Kuis ini. Terima Kasih Atas Donasinya! </h2>
+            <p>Nomor DANA: <span id="nomor-dana">08194949251</span></p>
+            <button id="btn-salin-dana">Salin Nomor</button>
+        </div>
+    </div>
+
+    <div id="page-start" class="page active">
+        <header>
+            <h1>Belajar dan Bermain</h1>
+            <input type="text" id="player-name-input" placeholder="Tuliskan Namamu di sini">
+            <h2>Pilih Tingkat Sekolah</h2>
+        </header>
+
+        <main class="selection-grid">
+            <button class="level-btn" data-level="SD">SD</button>
+            <button class="level-btn" data-level="SMP">SMP</button>
+            <button class="level-btn" data-level="SMA">SMA / SMK</button>
+        </main>
+
+        <button id="btn-next-level">NEXT</button>
+
+        <footer>
+            <button class="btn-donasi">Donasi</button>
+        </footer>
+    </div>
+
+    <div id="page-subject" class="page" style="display: none;">
+        <header>
+            <h2>Pilih Mata Pelajaran</h2>
+            <p id="current-level-display">Tingkat: </p>
+        </header>
+
+        <main id="subject-list" class="selection-grid">
+            </main>
+
+        <footer>
+            <button class="btn-donasi">Donasi</button>
+        </footer>
+    </div>
+
+    <div id="page-quiz" class="page" style="display: none;">
+        <header>
+            <div class="player-info">
+                <span id="quiz-character">😊</span> <p>Pemain: <span id="player-name-display"></span></p>
+            </div>
+        </header>
+
+        <main>
+            <p id="quiz-question-text">Pertanyaan akan muncul di sini...</p>
+            <div id="quiz-options" class="options-grid">
+                </div>
+
+            <div class="score-display">
+                Skor: <span id="current-score">0</span>
+            </div>
+
+            <button id="btn-end-quiz">❌ Selesai Kuis</button>
+        </main>
+
+        <footer>
+            <button class="btn-donasi">Donasi</button>
+        </footer>
+    </div>
+
+    <div id="modal-finish" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Terima Kasih, <span id="final-player-name"></span>!</h2>
+            <p>Skor Akhir Anda: <span id="final-score-display"></span></p>
+            <button id="btn-share-wa">Bagikan Skor ke WhatsApp</button>
+        </div>
+    </div>
+<style>/* style.css */
+
+/* Reset dan Pengaturan Dasar */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Warna latar belakang lembut */
+    display: flex;
+    justify-content: center; /* Memastikan konten berada di tengah horizontal */
+    align-items: flex-start; /* Konten dimulai dari atas */
+    min-height: 100vh;
+    padding-top: 30px;
+}
+
+/* CONTAINER UTAMA - Pusat dari semua tampilan */
+.page {
+    width: 90%;
+    max-width: 450px; /* Batasan lebar agar fokus di tengah */
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border-radius: 15px; /* Bingkai/sudut melengkung */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan bingkai */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Input dan Tombol Dasar */
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Grid Seleksi (Tingkat & Mata Pelajaran) */
+.selection-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.level-btn, .subject-btn {
+    flex: 1 1 40%; /* Mengatur lebar tombol agar 2 kolom */
+    max-width: 200px;
+    min-width: 120px;
+    margin: 10px;
+    background-color: #8da4d1; /* Warna tombol default (Biru keunguan) */
+    color: white;
+}
+
+.level-btn:hover, .subject-btn:hover {
+    background-color: #6a82b8;
+    transform: translateY(-2px);
+}
+
+.level-btn.selected {
+    background-color: #4a6fa5;
+    box-shadow: 0 0 10px rgba(74, 111, 165, 0.5);
+}
+
+/* Tombol Aksi Utama (NEXT/Donasi/Selesai) */
+#btn-next-level {
+    background-color: #5cb85c; /* Hijau (NEXT) */
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.btn-donasi {
+    background-color: #ffc107; /* Kuning (Donasi) */
+    color: #333;
+    padding: 10px 25px;
+    margin-top: 20px;
+}
+
+#btn-end-quiz {
+    background-color: #dc3545; /* Merah (Selesai Kuis) */
+    color: white;
+    margin-top: 20px;
+    width: 80%;
+}
+
+/* Halaman Kuis */
+.player-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#quiz-character {
+    font-size: 3em;
+    margin-right: 15px;
+}
+
+#quiz-question-text {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 25px 0;
+    padding: 15px;
+    border: 1px dashed #ccc;
+    border-radius: 10px;
+}
+
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.option-btn {
+    width: 100%;
+    background-color: #007bff; /* Biru terang untuk pilihan */
+    color: white;
+    text-align: left;
+    padding: 15px;
+}
+
+.option-btn:disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+
+.option-btn.correct {
+    background-color: #28a745; /* Hijau */
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+    transform: scale(1.02);
+}
+
+.option-btn.wrong {
+    background-color: #dc3545; /* Merah */
+}
+
+.score-display {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Modal/Popups */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal-content h2 {
+    color: #4a6fa5;
+}
+
+.modal-content button {
+    margin-top: 15px;
+}
+
+#btn-salin-dana {
+    background-color: #007bff;
+    color: white;
+}
+
+#btn-share-wa {
+    background-color: #25d366; /* Warna WhatsApp */
+    color: white;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #555;
+}
+
+/* Responsif (Opsional) */
+@media (max-width: 500px) {
+    .page {
+        padding: 15px;
+        width: 95%;
+    }
+}
+</style>
+
+    <audio id="audioCorrect" src="correct.mp3" preload="auto"></audio>
+    <audio id="audioWrong" src="wrong.mp3" preload="auto"></audio>
+	
+    <script src="Soal.js"></script>
+    <script src="Main.js"></script>
+</body>
+</html>
