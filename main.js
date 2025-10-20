@@ -1,3 +1,8 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+import { firebaseConfig } from "./firebaseConfig.js";
+
+
 // VARIABEL GLOBAL
 let playerName = '';
 let playerLevel = '';
@@ -237,6 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showPage('page-start');
 
 });
+
 
 
 
