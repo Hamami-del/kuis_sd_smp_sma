@@ -226,7 +226,7 @@ document.querySelector('#modal-finish .close-button').addEventListener('click', 
 });
 
 document.getElementById('btn-share-wa').addEventListener('click', () => {
-    const message = `Halo! Saya ${playerName} baru saja menyelesaikan kuis ${currentSubject} tingkat ${playerLevel} dan mendapatkan skor ${currentScore}! Ayo ikutan main dan kalahkan skor saya!`;
+    const message = `Halo! Saya ${playerName} baru saja menyelesaikan kuis ${currentSubject} tingkat ${playerLevel} dan mendapatkan skor ${currentScore}! Ayo ikutan main https://hamami-del.github.io/kuis_sd_smp_sma/`;
     const waLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
     window.open(waLink, '_blank');
 });
@@ -237,5 +237,6 @@ document.addEventListener('DOMContentLoaded', () => {
     showPage('page-start');
 
 });
+
 
 
