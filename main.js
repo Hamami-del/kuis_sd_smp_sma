@@ -197,6 +197,14 @@ document.getElementById('btn-share-wa').addEventListener('click', () => {
     const waLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
     window.open(waLink, '_blank');
 });
+// ==========================================
+// TOMBOL SELESAI KUIS MANUAL
+// ==========================================
+document.getElementById('btn-end-quiz').addEventListener('click', () => {
+    if (confirm("Apakah kamu yakin ingin mengakhiri kuis sekarang?")) {
+        finishQuiz();
+    }
+});
 
 
 // ==========================================
@@ -205,3 +213,4 @@ document.getElementById('btn-share-wa').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     showPage('page-start');
 });
+
