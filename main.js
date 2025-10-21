@@ -113,6 +113,8 @@ function startQuiz(level, subject) {
     quizQuestions = QUIZ_DATA[level][subject];
     currentQuestionIndex = 0;
     currentScore = 0;
+    document.getElementById('player-name-display').textContent = playerName;
+
     showPage('page-quiz');
     loadQuestion();
 }
@@ -213,4 +215,5 @@ document.getElementById('btn-end-quiz').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     showPage('page-start');
 });
+
 
