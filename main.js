@@ -1,6 +1,6 @@
 // === FIREBASE SETUP ===
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 import { firebaseConfig } from "./firebaseConfig.js";
 
 // Inisialisasi Firebase
@@ -18,6 +18,8 @@ let currentQuestionIndex = 0;
 let quizQuestions = [];
 const audioCorrect = document.getElementById('audioCorrect');
 const audioWrong = document.getElementById('audioWrong');
+
+const sponsorURL = "https://www.effectivegatecpm.com/bnr0fg635?key=cfb6707c978f7894439b33d707495919"; // 🔗 Ganti dengan URL kamu
 
 // ==========================================
 // FUNGSI NAVIGASI ANTAR HALAMAN
@@ -108,7 +110,6 @@ function startQuiz(level, subject) {
     quizQuestions = QUIZ_DATA[level][subject];
     currentQuestionIndex = 0;
     currentScore = 0;
-    document.getElementById('current-score').textContent = currentScore;
     showPage('page-quiz');
     loadQuestion();
 }
@@ -180,68 +181,20 @@ async function finishQuiz() {
     document.getElementById('final-player-name').textContent = playerName;
     document.getElementById('final-score-display').textContent = currentScore;
     document.getElementById('modal-finish').style.display = 'flex';
-
-    // 🔔 Tambahan: Popup Sponsor otomatis (aman & elegan)
-    setTimeout(() => {
-        tampilkanPopupSponsor();
-    }, 4000);
 }
 
-// ==========================================
-// POPUP SPONSOR OTOMATIS
-// ==========================================
-function tampilkanPopupSponsor() {
-    const popup = document.createElement('div');
-    popup.id = "popupSponsor";
-    popup.style.cssText = `
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background: rgba(0,0,0,0.6);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-    `;
-
-    const box = document.createElement('div');
-    box.style.cssText = `
-        background: #ffffff;
-        padding: 25px;
-        border-radius: 14px;
-        text-align: center;
-        width: 320px;
-        box-shadow: 0 0 15px rgba(0,0,0,0.3);
-        animation: fadeIn 0.4s ease;
-    `;
-
-    box.innerHTML = `
-        <h2>🎉 Kuis Selesai!</h2>
-        <p>Terima kasih, <b>${playerName}</b>! Skormu sudah tersimpan 🙌</p>
-        <p>💡 Dukung web ini dengan klik sponsor kami:</p>
-        <a href="https://www.effectivegatecpm.com/bnr0fg635?key=cfb6707c978f7894439b33d707495919" 
-           target="_blank"
-           style="display:inline-block; background:#ff9800; color:white; padding:10px 18px; border-radius:8px; text-decoration:none; margin-top:10px;">
-           🔗 Kunjungi Sponsor
-        </a><br>
-        <button onclick="document.getElementById('popupSponsor').remove()" 
-           style="background:#f44336; color:white; border:none; padding:8px 14px; border-radius:6px; margin-top:12px; cursor:pointer;">
-           Tutup
-        </button>
-    `;
-
-    popup.appendChild(box);
-    document.body.appendChild(popup);
-}
-
-// ==========================================
-// TOMBOL SELESAI DAN SHARE
-// ==========================================
-document.querySelector('#modal-finish .close-button').addEventListener('click', () => {
+// ✅ Tombol selesai kuis
+document.getElementById('btn-end-quiz').addEventListener('click', () => {
     document.getElementById('modal-finish').style.display = 'none';
     showPage('page-start');
+
+    // 💥 Popup sponsor otomatis setelah selesai
+    setTimeout(() => {
+        window.open(sponsorURL, '_blank');
+    }, 500);
 });
 
+// ✅ Tombol bagikan ke WhatsApp
 document.getElementById('btn-share-wa').addEventListener('click', () => {
     const message = `Halo! Saya ${playerName} baru saja menyelesaikan kuis ${currentSubject} tingkat ${playerLevel} dan mendapatkan skor ${currentScore}! Ayo ikutan main di https://hamami-del.github.io/kuis_sd_smp_sma/`;
     const waLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
