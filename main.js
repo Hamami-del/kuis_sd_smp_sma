@@ -200,7 +200,6 @@ document.getElementById('btn-end-quiz').addEventListener('click', () => {
     setTimeout(() => {
         window.open(sponsorURL, '_blank');
     }, 500);
-});
 
 // ✅ Tombol bagikan ke WhatsApp
 document.getElementById('btn-share-wa').addEventListener('click', () => {
@@ -215,4 +214,5 @@ document.getElementById('btn-share-wa').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     showPage('page-start');
 });
+
 
