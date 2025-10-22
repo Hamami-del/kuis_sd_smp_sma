@@ -19,7 +19,6 @@ let quizQuestions = [];
 const audioCorrect = document.getElementById('audioCorrect');
 const audioWrong = document.getElementById('audioWrong');
 
-
 // ==========================================
 // FUNGSI NAVIGASI ANTAR HALAMAN
 // ==========================================
@@ -29,7 +28,6 @@ function showPage(pageId) {
     });
     document.getElementById(pageId).style.display = 'block';
 }
-
 
 // ==========================================
 // LOGIKA UMUM & DONASI
@@ -49,7 +47,6 @@ document.getElementById('btn-salin-dana').addEventListener('click', () => {
     navigator.clipboard.writeText(danaNumber);
     alert('Nomor DANA berhasil disalin!');
 });
-
 
 // ==========================================
 // HALAMAN 1: START
@@ -78,7 +75,6 @@ document.getElementById('btn-next-level').addEventListener('click', () => {
     showPage('page-subject');
 });
 
-
 // ==========================================
 // HALAMAN 2: PEMILIHAN MATA PELAJARAN
 // ==========================================
@@ -105,7 +101,6 @@ function setupSubjectPage(level) {
     }
 }
 
-
 // ==========================================
 // HALAMAN 3: KUIS
 // ==========================================
@@ -113,8 +108,7 @@ function startQuiz(level, subject) {
     quizQuestions = QUIZ_DATA[level][subject];
     currentQuestionIndex = 0;
     currentScore = 0;
-    document.getElementById('player-name-display').textContent = playerName;
-
+    document.getElementById('current-score').textContent = currentScore;
     showPage('page-quiz');
     loadQuestion();
 }
@@ -165,10 +159,6 @@ function checkAnswer(button, selectedOption, correctAnswer) {
     }, 1500);
 }
 
-
-// ==========================================
-// SELESAI KUIS
-// ==========================================
 // ==========================================
 // SELESAI KUIS
 // ==========================================
@@ -191,18 +181,16 @@ async function finishQuiz() {
     document.getElementById('final-score-display').textContent = currentScore;
     document.getElementById('modal-finish').style.display = 'flex';
 
-    // 🧩 Tambahan: Tampilkan popup sponsor otomatis setelah kuis selesai
+    // 🔔 Tambahan: Popup Sponsor otomatis (aman & elegan)
     setTimeout(() => {
         tampilkanPopupSponsor();
-    }, 4000); // tampil setelah 4 detik (bisa ubah sesuai keinginan)
+    }, 4000);
 }
 
-
 // ==========================================
-// POPUP SPONSOR
+// POPUP SPONSOR OTOMATIS
 // ==========================================
 function tampilkanPopupSponsor() {
-    // Buat elemen popup
     const popup = document.createElement('div');
     popup.id = "popupSponsor";
     popup.style.cssText = `
@@ -218,7 +206,7 @@ function tampilkanPopupSponsor() {
 
     const box = document.createElement('div');
     box.style.cssText = `
-        background: white;
+        background: #ffffff;
         padding: 25px;
         border-radius: 14px;
         text-align: center;
@@ -246,12 +234,9 @@ function tampilkanPopupSponsor() {
     document.body.appendChild(popup);
 }
 
-
-    document.getElementById('final-player-name').textContent = playerName;
-    document.getElementById('final-score-display').textContent = currentScore;
-    document.getElementById('modal-finish').style.display = 'flex';
-}
-
+// ==========================================
+// TOMBOL SELESAI DAN SHARE
+// ==========================================
 document.querySelector('#modal-finish .close-button').addEventListener('click', () => {
     document.getElementById('modal-finish').style.display = 'none';
     showPage('page-start');
@@ -262,15 +247,6 @@ document.getElementById('btn-share-wa').addEventListener('click', () => {
     const waLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
     window.open(waLink, '_blank');
 });
-// ==========================================
-// TOMBOL SELESAI KUIS MANUAL
-// ==========================================
-document.getElementById('btn-end-quiz').addEventListener('click', () => {
-    if (confirm("Apakah kamu yakin ingin mengakhiri kuis sekarang?")) {
-        finishQuiz();
-    }
-});
-
 
 // ==========================================
 // INISIALISASI APP
@@ -278,6 +254,3 @@ document.getElementById('btn-end-quiz').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     showPage('page-start');
 });
-
-
-
