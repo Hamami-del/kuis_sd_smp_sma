@@ -942,6 +942,57 @@ const QUIZ_DATA = {
     },
     
     "SMP": {
+       // --- MATA PELAJARAN: ILMU PENGETAHUAN SOSIAL ---
+    "Ilmu Pengetahuan Sosial": [
+      { question: "Apa nama pahlawan yang memproklamasikan kemerdekaan Indonesia?", options: ["Soekarno", "Moh. Hatta", "Jenderal Sudirman", "Cut Nyak Dien"], answer: "Soekarno" },
+      { question: "Tanggal berapa Indonesia merdeka?", options: ["17 Agustus 1945", "10 November 1945", "20 Mei 1908", "1 Juni 1945"], answer: "17 Agustus 1945" },
+      { question: "Siapa wakil presiden pertama Indonesia?", options: ["Moh. Hatta", "Soekarno", "BJ Habibie", "Megawati"], answer: "Moh. Hatta" },
+      { question: "Apa semboyan bangsa Indonesia?", options: ["Garuda Sakti", "Bhinneka Tunggal Ika", "NKRI Harga Mati", "Merdeka Jaya"], answer: "Bhinneka Tunggal Ika" },
+      { question: "Apa lambang negara Indonesia?", options: ["Burung Garuda", "Bendera Merah Putih", "Padi dan Kapas", "Pohon Beringin"], answer: "Burung Garuda" },
+      { question: "Bendera Indonesia berwarna apa saja?", options: ["Merah dan Putih", "Merah dan Biru", "Kuning dan Hijau", "Hitam dan Putih"], answer: "Merah dan Putih" },
+      { question: "Apa arti warna merah pada bendera Indonesia?", options: ["Keberanian", "Kesucian", "Kemakmuran", "Persatuan"], answer: "Keberanian" },
+      { question: "Apa arti warna putih pada bendera Indonesia?", options: ["Kesucian", "Kekuatan", "Kekayaan", "Keadilan"], answer: "Kesucian" },
+      { question: "Apa dasar negara Indonesia?", options: ["UUD 1945", "Pancasila", "GBHN", "Proklamasi"], answer: "Pancasila" },
+      { question: "Berapa jumlah sila dalam Pancasila?", options: ["3", "4", "5", "6"], answer: "5" },
+      { question: "Sila pertama Pancasila berbunyi apa?", options: ["Ketuhanan yang Maha Esa", "Kemanusiaan yang Adil dan Beradab", "Persatuan Indonesia", "Keadilan Sosial bagi seluruh rakyat Indonesia"], answer: "Ketuhanan yang Maha Esa" },
+      { question: "Siapa yang mengetik naskah proklamasi?", options: ["Sayuti Melik", "Fatmawati", "Ahmad Soebardjo", "Sudirman"], answer: "Sayuti Melik" },
+      { question: "Dimana teks proklamasi dibacakan?", options: ["Pegangsaan Timur 56 Jakarta", "Istana Negara", "Lapangan Banteng", "Surabaya"], answer: "Pegangsaan Timur 56 Jakarta" },
+      { question: "Apa isi sila ketiga Pancasila?", options: ["Persatuan Indonesia", "Kemanusiaan yang Adil dan Beradab", "Ketuhanan yang Maha Esa", "Keadilan Sosial bagi seluruh rakyat Indonesia"], answer: "Persatuan Indonesia" },
+      { question: "Apa yang dimaksud dengan proklamasi kemerdekaan?", options: ["Pernyataan resmi Indonesia merdeka", "Hari ulang tahun Soekarno", "Akhir perang dunia", "Upacara kenegaraan"], answer: "Pernyataan resmi Indonesia merdeka" },
+      { question: "Apa bentuk negara Indonesia?", options: ["Republik", "Kerajaan", "Persekutuan", "Monarki"], answer: "Republik" },
+      { question: "Apa ibukota Indonesia?", options: ["Jakarta", "Bandung", "Surabaya", "Medan"], answer: "Jakarta" },
+      { question: "Siapa pahlawan wanita dari Jepara yang memperjuangkan emansipasi wanita?", options: ["RA Kartini", "Cut Nyak Dien", "Martha Christina Tiahahu", "Dewi Sartika"], answer: "RA Kartini" },
+      { question: "Kapan Hari Pahlawan diperingati?", options: ["10 November", "17 Agustus", "20 Mei", "21 April"], answer: "10 November" },
+      { question: "Apa isi dari Sumpah Pemuda?", options: ["Persatuan bangsa", "Kemerdekaan", "Kebebasan beragama", "Keadilan"], answer: "Persatuan bangsa" }
+    ],
+
+    // --- MATA PELAJARAN: PJOK ---
+    "PJOK": [
+      { question: "Berapa jumlah pemain dalam satu tim sepak bola?", options: ["9", "10", "11", "12"], answer: "11" },
+      { question: "Olahraga apa yang menggunakan raket?", options: ["Sepak bola", "Basket", "Bulutangkis", "Renang"], answer: "Bulutangkis" },
+      { question: "Berapa jumlah pemain dalam satu tim voli?", options: ["4", "5", "6", "7"], answer: "6" },
+      { question: "Renang dilakukan di?", options: ["Kolam renang", "Lapangan", "Ruang kelas", "Kantin"], answer: "Kolam renang" },
+      { question: "Gerakan melempar bola disebut?", options: ["Throwing", "Catching", "Running", "Jumping"], answer: "Throwing" },
+      { question: "Latihan push up bermanfaat untuk menguatkan otot bagian?", options: ["Tangan dan dada", "Kaki", "Perut", "Leher"], answer: "Tangan dan dada" },
+      { question: "Sit up bermanfaat untuk menguatkan otot?", options: ["Perut", "Lengan", "Leher", "Kaki"], answer: "Perut" },
+      { question: "Berapa lama waktu permainan futsal?", options: ["2x20 menit", "2x25 menit", "2x30 menit", "2x45 menit"], answer: "2x20 menit" },
+      { question: "Permainan basket dimulai dengan?", options: ["Jump ball", "Servis", "Tendangan awal", "Lemparan ke dalam"], answer: "Jump ball" },
+      { question: "Alat yang digunakan untuk melompat tinggi disebut?", options: ["Matras", "Tiang dan mistar", "Bola", "Tongkat"], answer: "Tiang dan mistar" }
+    ],
+
+    // --- MATA PELAJARAN: AGAMA ---
+    "Agama": [
+      { question: "Siapakah nabi terakhir dalam agama Islam?", options: ["Nabi Musa", "Nabi Isa", "Nabi Muhammad", "Nabi Nuh"], answer: "Nabi Muhammad" },
+      { question: "Apa kitab suci umat Islam?", options: ["Taurat", "Zabur", "Injil", "Al-Qur'an"], answer: "Al-Qur'an" },
+      { question: "Berapa kali salat wajib dilakukan dalam sehari?", options: ["3", "4", "5", "6"], answer: "5" },
+      { question: "Puasa wajib dilakukan pada bulan apa?", options: ["Syawal", "Ramadan", "Dzulhijjah", "Muharram"], answer: "Ramadan" },
+      { question: "Rukun Islam yang pertama adalah?", options: ["Syahadat", "Salat", "Zakat", "Puasa"], answer: "Syahadat" },
+      { question: "Rukun iman yang pertama adalah?", options: ["Iman kepada Allah", "Iman kepada malaikat", "Iman kepada kitab", "Iman kepada rasul"], answer: "Iman kepada Allah" },
+      { question: "Berapa jumlah rakaat salat subuh?", options: ["2", "3", "4", "5"], answer: "2" },
+      { question: "Berapa jumlah rakaat salat zuhur?", options: ["2", "3", "4", "5"], answer: "4" },
+      { question: "Siapa malaikat yang menyampaikan wahyu?", options: ["Mikail", "Jibril", "Israfil", "Izrail"], answer: "Jibril" },
+      { question: "Siapa nabi yang membangun Ka'bah bersama anaknya Ismail?", options: ["Nabi Ibrahim", "Nabi Nuh", "Nabi Musa", "Nabi Isa"], answer: "Nabi Ibrahim" }
+    ], 
         "Matematika": [
     {
         question: "5 + 7 = ... (ayo jangan pakai kalkulator, pakai otak encer kamu 😆)",
@@ -2986,4 +3037,5 @@ const QUIZ_DATA = {
    ]
 
     }
+
 };
