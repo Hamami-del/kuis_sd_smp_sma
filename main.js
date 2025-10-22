@@ -189,10 +189,10 @@ document.getElementById('btn-end-quiz').addEventListener('click', () => {
     document.getElementById('modal-finish').style.display = 'none';
     // Kembali ke halaman utama
     showPage('page-start');
-    // Buka sponsor setelah 2 detik
+    // Buka sponsor setelah 4 detik
     setTimeout(() => {
         window.open(sponsorURL, '_blank');
-    }, 2000);
+    }, 4000);
 });
 
 // ✅ Tombol bagikan ke WhatsApp
@@ -208,3 +208,4 @@ document.getElementById('btn-share-wa').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     showPage('page-start');
 });
+
