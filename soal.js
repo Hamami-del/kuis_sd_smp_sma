@@ -977,9 +977,158 @@ const QUIZ_DATA = {
       { question: "Sit up bermanfaat untuk menguatkan otot?", options: ["Perut", "Lengan", "Leher", "Kaki"], answer: "Perut" },
       { question: "Berapa lama waktu permainan futsal?", options: ["2x20 menit", "2x25 menit", "2x30 menit", "2x45 menit"], answer: "2x20 menit" },
       { question: "Permainan basket dimulai dengan?", options: ["Jump ball", "Servis", "Tendangan awal", "Lemparan ke dalam"], answer: "Jump ball" },
-      { question: "Alat yang digunakan untuk melompat tinggi disebut?", options: ["Matras", "Tiang dan mistar", "Bola", "Tongkat"], answer: "Tiang dan mistar" }
-    ],
-
+      { question: "Alat yang digunakan untuk melompat tinggi disebut?", options: ["Matras", "Tiang dan mistar", "Bola", "Tongkat"], answer: "Tiang dan mistar" },
+    {
+    "question": "Berapa jumlah pemain dalam satu tim sepak bola yang berada di lapangan saat pertandingan dimulai?",
+    "options": ["9", "10", "11", "12"],
+    "answer": "11"
+  },
+  {
+    "question": "Teknik menendang bola yang menghasilkan laju bola lurus dan mendatar, paling efektif menggunakan bagian kaki...",
+    "options": ["Kaki bagian dalam", "Punggung kaki", "Kaki bagian luar", "Ujung kaki"],
+    "answer": "Punggung kaki"
+  },
+  {
+    "question": "Durasi normal satu babak (half time) dalam permainan sepak bola adalah...",
+    "options": ["30 menit", "35 menit", "45 menit", "60 menit"],
+    "answer": "45 menit"
+  },
+  {
+    "question": "Posisi pemain dalam sepak bola yang tugas utamanya mencegah bola masuk ke gawang dan merupakan pertahanan terakhir adalah...",
+    "options": ["Stopper", "Gelandang", "Bek Sayap", "Penjaga Gawang"],
+    "answer": "Penjaga Gawang"
+  },
+  {
+    "question": "Gerakan memantul-mantulkan bola sambil berjalan atau berlari dalam permainan bola basket dikenal dengan istilah...",
+    "options": ["Shooting", "Dribbling", "Passing", "Pivot"],
+    "answer": "Dribbling"
+  },
+  {
+    "question": "Dalam bola basket, tembakan yang dilakukan dari luar garis setengah lingkaran besar (garis 3 angka) akan menghasilkan poin sebanyak...",
+    "options": ["1 poin", "2 poin", "3 poin", "4 poin"],
+    "answer": "3 poin"
+  },
+  {
+    "question": "Jumlah waktu per babak (kuarter) dalam permainan bola basket sesuai standar FIBA adalah...",
+    "options": ["8 menit", "10 menit", "12 menit", "15 menit"],
+    "answer": "10 menit"
+  },
+  {
+    "question": "Gerakan memutar badan dengan satu kaki sebagai poros saat menguasai bola dalam bola basket disebut...",
+    "options": ["Lay-up", "Screen", "Pivot", "Rebound"],
+    "answer": "Pivot"
+  },
+  {
+    "question": "Teknik dasar dalam bola voli untuk memulai permainan dengan memukul bola melewati net ke daerah lawan disebut...",
+    "options": ["Smash", "Block", "Service", "Passing"],
+    "answer": "Service"
+  },
+  {
+    "question": "Batas maksimal sentuhan bola oleh satu tim sebelum bola harus dikembalikan ke daerah lawan dalam permainan bola voli adalah...",
+    "options": ["2 kali", "3 kali", "4 kali", "Tidak terbatas"],
+    "answer": "3 kali"
+  },
+  {
+    "question": "Jumlah pemain inti dalam satu tim bola voli yang berada di lapangan saat pertandingan adalah...",
+    "options": ["4 orang", "5 orang", "6 orang", "7 orang"],
+    "answer": "6 orang"
+  },
+  {
+    "question": "Pukulan keras menukik yang bertujuan mematikan pertahanan lawan dalam bola voli disebut...",
+    "options": ["Passing bawah", "Block", "Smash", "Flick"],
+    "answer": "Smash"
+  },
+  {
+    "question": "Nomor lari yang menggunakan start jongkok adalah...",
+    "options": ["Lari estafet", "Lari jarak menengah", "Lari jarak jauh", "Lari jarak pendek"],
+    "answer": "Lari jarak pendek"
+  },
+  {
+    "question": "Aba-aba pada start jongkok yang diikuti dengan mengangkat panggul lebih tinggi dari bahu adalah...",
+    "options": ["'Siap'", "'Ya/Bunyi Pistol'", "'Mulai'", "'Angkat'"],
+    "answer": "'Siap'"
+  },
+  {
+    "question": "Salah satu nomor atletik yang mengukur jarak horizontal yang dicapai dari tolakan adalah...",
+    "options": ["Lari maraton", "Lompat tinggi", "Lompat jauh", "Lempar cakram"],
+    "answer": "Lompat jauh"
+  },
+  {
+    "question": "Fase terakhir dalam lompat jauh di mana pelompat berusaha mendarat sejauh mungkin disebut fase...",
+    "options": ["Awalan", "Tolakan", "Melayang di udara", "Pendaratan"],
+    "answer": "Pendaratan"
+  },
+  {
+    "question": "Alat yang berbentuk bulat pipih terbuat dari kayu atau bahan lain dan dilempar sejauh mungkin adalah...",
+    "options": ["Lembing", "Peluru", "Cakram", "Martil"],
+    "answer": "Cakram"
+  },
+  {
+    "question": "Start yang digunakan untuk lari jarak menengah (800m, 1500m) adalah...",
+    "options": ["Start Jongkok", "Start Berdiri", "Start Melayang", "Start Gabungan"],
+    "answer": "Start Berdiri"
+  },
+  {
+    "question": "Gaya renang yang memiliki posisi tubuh telentang di permukaan air adalah gaya...",
+    "options": ["Gaya bebas", "Gaya dada", "Gaya punggung", "Gaya kupu-kupu"],
+    "answer": "Gaya punggung"
+  },
+  {
+    "question": "Teknik pernapasan pada renang gaya bebas dilakukan dengan memutar kepala ke samping, sejajar dengan...",
+    "options": ["Di depan tangan yang sedang meluncur", "Di atas air, saat tangan menarik", "Di samping tangan yang sedang istirahat", "Lurus ke bawah air"],
+    "answer": "Di samping tangan yang sedang istirahat"
+  },
+  {
+    "question": "Gaya renang yang gerakannya menyerupai katak adalah...",
+    "options": ["Gaya bebas", "Gaya dada", "Gaya punggung", "Gaya kupu-kupu"],
+    "answer": "Gaya dada"
+  },
+  {
+    "question": "Alat bantu yang digunakan untuk melatih kekuatan kaki dalam renang, biasanya berupa papan luncur, disebut...",
+    "options": ["Pull buoy", "Fin", "Hand paddle", "Kick board"],
+    "answer": "Kick board"
+  },
+  {
+    "question": "Sikap awal untuk memulai gerakan dalam pencak silat, di mana posisi kaki siap dan tangan di dada, disebut...",
+    "options": ["Pola langkah", "Jurus", "Pasang", "Tangkisan"],
+    "answer": "Pasang"
+  },
+  {
+    "question": "Teknik pembelaan diri dalam pencak silat dengan memindahkan sasaran dari arah serangan, bukan menahan serangan, disebut...",
+    "options": ["Elakan", "Tangkisan", "Pukulan", "Tendangan"],
+    "answer": "Elakan"
+  },
+  {
+    "question": "Serangan yang menggunakan ujung telapak kaki atau tumit dengan gerakan menghentak ke arah depan, biasanya ke perut atau dada, adalah...",
+    "options": ["Tendangan 'T'", "Tendangan lurus", "Sapuan", "Guntingan"],
+    "answer": "Tendangan lurus"
+  },
+  {
+    "question": "Unsur kebugaran jasmani yang berhubungan erat dengan kemampuan jantung dan paru-paru bekerja secara efisien adalah...",
+    "options": ["Kekuatan", "Kecepatan", "Daya Tahan", "Kelenturan"],
+    "answer": "Daya Tahan"
+  },
+  {
+    "question": "Latihan *sit-up* bertujuan utama untuk melatih kekuatan otot...",
+    "options": ["Lengan", "Perut", "Kaki", "Punggung"],
+    "answer": "Perut"
+  },
+  {
+    "question": "Kemampuan sendi dan otot untuk bergerak secara maksimal tanpa mengalami cidera disebut...",
+    "options": ["Kelenturan (fleksibilitas)", "Keseimbangan", "Agility (kelincahan)", "Koordinasi"],
+    "answer": "Kelenturan (fleksibilitas)"
+  },
+  {
+    "question": "Tes lari *cooper* (lari 12 menit) adalah salah satu cara untuk mengukur unsur kebugaran...",
+    "options": ["Kekuatan otot", "Kelincahan", "Daya tahan", "Kecepatan"],
+    "answer": "Daya tahan"
+  },
+  {
+    "question": "Tindakan pertolongan pertama pada kecelakaan (P3K) yang benar pada luka terbuka ringan adalah...",
+    "options": ["Mengoleskan minyak panas", "Membersihkan luka dengan air bersih dan antiseptik", "Menutup luka rapat-rapat tanpa dibersihkan", "Mengompres dengan es batu"],
+    "answer": "Membersihkan luka dengan air bersih dan antiseptik"
+  }
+],
     // --- MATA PELAJARAN: AGAMA ---
     "Agama": [
       { question: "Siapakah nabi terakhir dalam agama Islam?", options: ["Nabi Musa", "Nabi Isa", "Nabi Muhammad", "Nabi Nuh"], answer: "Nabi Muhammad" },
@@ -991,8 +1140,157 @@ const QUIZ_DATA = {
       { question: "Berapa jumlah rakaat salat subuh?", options: ["2", "3", "4", "5"], answer: "2" },
       { question: "Berapa jumlah rakaat salat zuhur?", options: ["2", "3", "4", "5"], answer: "4" },
       { question: "Siapa malaikat yang menyampaikan wahyu?", options: ["Mikail", "Jibril", "Israfil", "Izrail"], answer: "Jibril" },
-      { question: "Siapa nabi yang membangun Ka'bah bersama anaknya Ismail?", options: ["Nabi Ibrahim", "Nabi Nuh", "Nabi Musa", "Nabi Isa"], answer: "Nabi Ibrahim" }
-    ], 
+      { question: "Siapa nabi yang membangun Ka'bah bersama anaknya Ismail?", options: ["Nabi Ibrahim", "Nabi Nuh", "Nabi Musa", "Nabi Isa"], answer: "Nabi Ibrahim" },
+    {"question": "Kitab suci utama yang menjadi pedoman hidup bagi umat Islam adalah...",
+    "options": ["Taurat", "Zabur", "Injil", "Al-Qur'an"],
+    "answer": "Al-Qur'an"
+  },
+  {
+    "question": "Sumber hukum Islam kedua setelah Al-Qur'an yang berisi perkataan, perbuatan, dan ketetapan Nabi Muhammad SAW adalah...",
+    "options": ["Ijma'", "Qiyas", "Hadis/Sunnah", "Ijtihad"],
+    "answer": "Hadis/Sunnah"
+  },
+  {
+    "question": "Hukum bacaan Alif Lam yang dibaca jelas karena huruf Lam bertemu dengan salah satu dari 14 huruf Qamariyah disebut...",
+    "options": ["Alif Lam Syamsiyah", "Idgham Bighunnah", "Alif Lam Qamariyah", "Ikhfa' Hakiki"],
+    "answer": "Alif Lam Qamariyah"
+  },
+  {
+    "question": "Hukum bacaan Alif Lam yang dilebur atau tidak dibaca, sehingga huruf setelahnya bertasydid, disebut...",
+    "options": ["Alif Lam Syamsiyah", "Idzhar Halqi", "Alif Lam Qamariyah", "Iqlab"],
+    "answer": "Alif Lam Syamsiyah"
+  },
+  {
+    "question": "Iman kepada Allah SWT adalah rukun iman yang ke...",
+    "options": ["Satu", "Dua", "Tiga", "Empat"],
+    "answer": "Satu"
+  },
+  {
+    "question": "Secara bahasa, Asmaul Husna berarti...",
+    "options": ["Janji Allah", "Tanda-tanda Kebesaran Allah", "Nama-nama yang Baik", "Sifat-sifat Kesempurnaan"],
+    "answer": "Nama-nama yang Baik"
+  },
+  {
+    "question": "Asmaul Husna 'Al-Alim' memiliki arti bahwa Allah SWT Maha...",
+    "options": ["Mengetahui", "Mendengar", "Melihat", "Bijaksana"],
+    "answer": "Mengetahui"
+  },
+  {
+    "question": "Asmaul Husna 'Al-Khabir' mengandung makna bahwa Allah SWT Maha...",
+    "options": ["Menguasai", "Teliti", "Menciptakan", "Pemurah"],
+    "answer": "Teliti"
+  },
+  {
+    "question": "Asmaul Husna 'As-Sami'' memiliki arti bahwa Allah SWT Maha...",
+    "options": ["Mendengar", "Melihat", "Berdiri Sendiri", "Pengampun"],
+    "answer": "Mendengar"
+  },
+  {
+    "question": "Asmaul Husna 'Al-Bashir' memiliki arti bahwa Allah SWT Maha...",
+    "options": ["Mengetahui", "Melihat", "Perkasa", "Pengasih"],
+    "answer": "Melihat"
+  },
+  {
+    "question": "Dalam konteks Asmaul Husna, perilaku seorang siswa yang rajin belajar untuk mendapatkan ilmu merupakan perwujudan dari keimanan terhadap sifat Allah...",
+    "options": ["Al-Khabir", "Al-Bashir", "Al-Alim", "As-Sami'"],
+    "answer": "Al-Alim"
+  },
+  {
+    "question": "Membersihkan diri dari hadas dan najis sehingga sah untuk melaksanakan ibadah tertentu disebut...",
+    "options": ["Istinja'", "Thaharah", "Wudu", "Tayamum"],
+    "answer": "Thaharah"
+  },
+  {
+    "question": "Benda-benda kotor yang menghalangi sahnya ibadah, seperti darah, air kencing, atau kotoran hewan, disebut...",
+    "options": ["Hadas", "Maksiat", "Najis", "Syirik"],
+    "answer": "Najis"
+  },
+  {
+    "question": "Peristiwa yang menyebabkan seseorang tidak suci dan tidak boleh salat atau menyentuh Al-Qur'an, seperti buang air besar atau kecil, disebut...",
+    "options": ["Najis", "Murtad", "Hadas", "Kafir"],
+    "answer": "Hadas"
+  },
+  {
+    "question": "Pembagian hadas terbagi menjadi dua, yaitu hadas kecil dan hadas besar. Cara menghilangkan hadas besar adalah dengan...",
+    "options": ["Wudu", "Tayamum", "Mandi Wajib (Janabah)", "Istinja'"],
+    "answer": "Mandi Wajib (Janabah)"
+  },
+  {
+    "question": "Rukun wudu yang ketiga adalah mengusap...",
+    "options": ["Muka", "Telinga", "Sebagian rambut/kepala", "Kedua kaki"],
+    "answer": "Sebagian rambut/kepala"
+  },
+  {
+    "question": "Mengganti wudu atau mandi wajib dengan mengusap wajah dan kedua tangan menggunakan debu suci (tanah) disebut...",
+    "options": ["Istinja'", "Tahallul", "Tayamum", "Istibra'"],
+    "answer": "Tayamum"
+  },
+  {
+    "question": "Syarat diperbolehkannya tayamum adalah...",
+    "options": ["Sedang dalam perjalanan jauh", "Tidak ada air atau berhalangan menggunakan air", "Tidak mampu bergerak", "Berada di tempat yang sepi"],
+    "answer": "Tidak ada air atau berhalangan menggunakan air"
+  },
+  {
+    "question": "Berikut ini yang merupakan contoh dari najis *mukhaffafah* (ringan) adalah...",
+    "options": ["Jilatan anjing", "Kotoran manusia", "Air kencing bayi laki-laki yang belum makan apa-apa kecuali ASI", "Darah haid"],
+    "answer": "Air kencing bayi laki-laki yang belum makan apa-apa kecuali ASI"
+  },
+  {
+    "question": "Najis *mughalladhah* (berat) adalah najis dari...",
+    "options": ["Air liur anjing dan babi", "Air kencing dan kotoran manusia", "Darah dan nanah", "Muntah dan bangkai"],
+    "answer": "Air liur anjing dan babi"
+  },
+  {
+    "question": "Hukum salat berjamaah bagi laki-laki adalah...",
+    "options": ["Sunnah Muakkad", "Wajib 'ain", "Makruh", "Haram"],
+    "answer": "Sunnah Muakkad"
+  },
+  {
+    "question": "Orang yang menjadi pemimpin salat berjamaah disebut...",
+    "options": ["Makmum", "Muazin", "Khatib", "Imam"],
+    "answer": "Imam"
+  },
+  {
+    "question": "Orang yang mengikuti salat di belakang imam disebut...",
+    "options": ["Imam", "Khatib", "Muazin", "Makmum"],
+    "answer": "Makmum"
+  },
+  {
+    "question": "Jika seorang makmum datang dan mendapati imam sudah rukuk pada rakaat pertama, lalu ia takbiratul ihram dan langsung rukuk, maka ia mendapatkan...",
+    "options": ["Imam", "Masbuk", "Muafiq", "Sujud Sahwi"],
+    "answer": "Masbuk"
+  },
+  {
+    "question": "Salah satu syarat sahnya salat berjamaah adalah adanya kesamaan...",
+    "options": ["Usia imam dan makmum", "Jenis kelamin imam dan makmum", "Tempat salat", "Niat mengikuti imam"],
+    "answer": "Niat mengikuti imam"
+  },
+  {
+    "question": "Jika salat berjamaah hanya terdiri dari dua orang, maka posisi makmum adalah...",
+    "options": ["Berada di depan imam", "Berada sejajar di samping kiri imam", "Berada sejajar di samping kanan imam", "Berada di belakang imam"],
+    "answer": "Berada sejajar di samping kanan imam"
+  },
+  {
+    "question": "Keutamaan salat berjamaah dibandingkan salat sendirian (munfarid) adalah...",
+    "options": ["25 derajat", "27 derajat", "40 derajat", "70 derajat"],
+    "answer": "27 derajat"
+  },
+  {
+    "question": "Yang tidak termasuk dalam keutamaan salat berjamaah adalah...",
+    "options": ["Mempererat tali silaturahmi", "Mendapat pahala 27 derajat", "Meningkatkan sifat individualisme", "Melatih kedisiplinan"],
+    "answer": "Meningkatkan sifat individualisme"
+  },
+  {
+    "question": "Dalam salat berjamaah, makmum harus mengikuti gerakan imam. Makmum tidak boleh mendahului gerakan imam, ini disebut...",
+    "options": ["Muafiq", "Masbuk", "Mufaraqah", "Muqaranah"],
+    "answer": "Muqaranah"
+  },
+  {
+    "question": "Tugas seorang muazin dalam salat berjamaah adalah...",
+    "options": ["Memimpin salat", "Membacakan doa qunut", "Mengumandangkan azan dan iqamah", "Menghitung jumlah rakaat"],
+    "answer": "Mengumandangkan azan dan iqamah"
+  }
+], 
         "Matematika": [
     {
         question: "5 + 7 = ... (ayo jangan pakai kalkulator, pakai otak encer kamu 😆)",
@@ -3039,3 +3337,4 @@ const QUIZ_DATA = {
     }
 
 };
+
