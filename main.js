@@ -185,19 +185,15 @@ async function finishQuiz() {
 
 // ✅ Tombol selesai kuis
 document.getElementById('btn-end-quiz').addEventListener('click', () => {
-    // 1️⃣ Tutup modal hasil
+    // Tutup modal hasil
     document.getElementById('modal-finish').style.display = 'none';
-    // 2️⃣ Kembali ke halaman utama
+    // Kembali ke halaman utama
     showPage('page-start');
-    // 3️⃣ Tunggu sedikit supaya transisi halus baru buka sponsor
+    // Buka sponsor setelah 2 detik
     setTimeout(() => {
         window.open(sponsorURL, '_blank');
-    }, 2000); // jeda 2 detik biar modal sempat tampil
-
-    // 💥 Popup sponsor otomatis setelah selesai
-    setTimeout(() => {
-        window.open(sponsorURL, '_blank');
-    }, 500);
+    }, 2000);
+});
 
 // ✅ Tombol bagikan ke WhatsApp
 document.getElementById('btn-share-wa').addEventListener('click', () => {
@@ -212,6 +208,3 @@ document.getElementById('btn-share-wa').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     showPage('page-start');
 });
-
-
-
