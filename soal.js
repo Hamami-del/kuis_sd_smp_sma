@@ -944,6 +944,156 @@ const QUIZ_DATA = {
     "SMP": {
        // --- MATA PELAJARAN: ILMU PENGETAHUAN SOSIAL ---
     "Ilmu Pengetahuan Sosial": [
+        {
+    "question": "Tempat di permukaan bumi baik secara keseluruhan maupun hanya sebagian yang digunakan untuk hidup oleh makhluk hidup disebut...",
+    "options": ["Wilayah", "Lahan", "Ruang", "Lokasi"],
+    "answer": "Ruang"
+  },
+  {
+    "question": "Bentuk hubungan timbal balik antara dua wilayah atau lebih yang dapat menimbulkan suatu gejala, kenampakan, atau permasalahan baru disebut...",
+    "options": ["Koneksi spasial", "Interaksi antarruang", "Dinamika populasi", "Pola keruangan"],
+    "answer": "Interaksi antarruang"
+  },
+  {
+    "question": "Komponen peta yang menunjukkan perbandingan jarak pada peta dengan jarak sesungguhnya di lapangan adalah...",
+    "options": ["Simbol", "Orientasi", "Garis koordinat", "Skala"],
+    "answer": "Skala"
+  },
+  {
+    "question": "Letak Indonesia yang diapit oleh dua benua, yaitu Benua Asia dan Benua Australia, serta dua samudra, yaitu Samudra Hindia dan Samudra Pasifik, merupakan letak...",
+    "options": ["Astronomis", "Geologis", "Geografis", "Ekologis"],
+    "answer": "Geografis"
+  },
+  {
+    "question": "Garis khayal pada peta yang digunakan sebagai penentu waktu di berbagai daerah di dunia adalah...",
+    "options": ["Garis Lintang", "Garis Bujur", "Garis Khatulistiwa", "Garis Pantai"],
+    "answer": "Garis Bujur"
+  },
+  {
+    "question": "Indonesia memiliki iklim musim (muson) yang dipengaruhi oleh angin yang berganti arah setiap setengah tahun sekali. Hal ini merupakan dampak dari letak...",
+    "options": ["Geologis", "Astronomis", "Geografis", "Maritim"],
+    "answer": "Geografis"
+  },
+  {
+    "question": "Aktivitas yang menyebabkan perpindahan penduduk dari desa ke kota dengan tujuan mencari penghidupan yang lebih baik disebut...",
+    "options": ["Urbanisasi", "Transmigrasi", "Imigrasi", "Ruralisasi"],
+    "answer": "Urbanisasi"
+  },
+  {
+    "question": "Sumber daya alam yang tidak dapat diperbarui, antara lain...",
+    "options": ["Hutan dan air", "Minyak bumi dan batu bara", "Tumbuhan dan hewan", "Tanah dan udara"],
+    "answer": "Minyak bumi dan batu bara"
+  },
+  {
+    "question": "Proses belajar seorang individu untuk mengenal dan menghayati nilai-nilai dan norma-norma yang berlaku dalam masyarakat agar dapat berpartisipasi di dalamnya disebut...",
+    "options": ["Akomodasi", "Asimilasi", "Integrasi", "Sosialisasi"],
+    "answer": "Sosialisasi"
+  },
+  {
+    "question": "Lembaga sosialisasi pertama dan utama bagi seorang anak yang berperan menanamkan nilai-nilai dasar adalah...",
+    "options": ["Sekolah", "Teman sebaya", "Keluarga", "Media massa"],
+    "answer": "Keluarga"
+  },
+  {
+    "question": "Interaksi sosial yang mengarah pada persatuan dan meningkatkan solidaritas, seperti gotong royong, disebut bentuk interaksi...",
+    "options": ["Akomodatif", "Disosiatif", "Asosiatif", "Kontravensi"],
+    "answer": "Asosiatif"
+  },
+  {
+    "question": "Contoh interaksi sosial yang termasuk ke dalam bentuk disosiatif (perpecahan) adalah...",
+    "options": ["Kerja sama", "Persaingan", "Akomodasi", "Akulturasi"],
+    "answer": "Persaingan"
+  },
+  {
+    "question": "Manusia selalu berusaha memenuhi kebutuhan hidupnya dengan mempertimbangkan pengorbanan yang dilakukan. Hal ini menunjukkan manusia sebagai...",
+    "options": ["Makhluk politik", "Makhluk ekonomi", "Makhluk sosial", "Makhluk spiritual"],
+    "answer": "Makhluk ekonomi"
+  },
+  {
+    "question": "Tindakan manusia yang didorong oleh keinginan untuk mencapai kepuasan dan mendapatkan keuntungan sebesar-besarnya disebut...",
+    "options": ["Prinsip ekonomi", "Motif ekonomi", "Kegiatan ekonomi", "Politik ekonomi"],
+    "answer": "Motif ekonomi"
+  },
+  {
+    "question": "Berikut ini yang merupakan contoh kebutuhan primer adalah...",
+    "options": ["Mobil mewah", "Pakaian", "Liburan", "Perhiasan"],
+    "answer": "Pakaian"
+  },
+  {
+    "question": "Kebutuhan yang harus dipenuhi terlebih dahulu karena sangat penting untuk kelangsungan hidup manusia disebut kebutuhan...",
+    "options": ["Sekunder", "Tersier", "Primer", "Masa depan"],
+    "answer": "Primer"
+  },
+  {
+    "question": "Kelangkaan (scarcity) terjadi karena...",
+    "options": ["Alat pemuas kebutuhan banyak", "Kebutuhan manusia terbatas", "Sumber daya terbatas sedangkan kebutuhan tidak terbatas", "Harga barang naik"],
+    "answer": "Sumber daya terbatas sedangkan kebutuhan tidak terbatas"
+  },
+  {
+    "question": "Benda-benda yang digunakan dalam proses produksi, seperti mesin pabrik dan bahan baku, tergolong dalam barang...",
+    "options": ["Konsumsi", "Ekonomi", "Bebas", "Produksi"],
+    "answer": "Produksi"
+  },
+  {
+    "question": "Lembaga yang mengatur hubungan antar manusia dalam pemenuhan kebutuhan pokok yang berkaitan dengan produksi, distribusi, dan konsumsi barang/jasa disebut lembaga...",
+    "options": ["Pendidikan", "Politik", "Ekonomi", "Agama"],
+    "answer": "Ekonomi"
+  },
+  {
+    "question": "Salah satu fungsi utama lembaga keluarga dalam masyarakat adalah fungsi...",
+    "options": ["Ekonomi dan agama", "Proteksi (perlindungan) dan sosialisasi", "Politik dan hukum", "Rekreasi dan keamanan"],
+    "answer": "Proteksi (perlindungan) dan sosialisasi"
+  },
+  {
+    "question": "Keadaan bumi yang lebih tinggi dibandingkan daerah di sekitarnya, biasanya memiliki ketinggian lebih dari 600 meter di atas permukaan laut, disebut...",
+    "options": ["Dataran rendah", "Pegunungan", "Pesisir", "Dataran tinggi"],
+    "answer": "Dataran tinggi"
+  },
+  {
+    "question": "Batas wilayah laut teritorial Indonesia yang ditarik dari garis dasar pantai adalah sejauh...",
+    "options": ["3 mil", "12 mil laut", "24 mil laut", "200 mil laut"],
+    "answer": "12 mil laut"
+  },
+  {
+    "question": "Sebagian besar wilayah Indonesia memiliki tanah yang subur. Kondisi ini dipengaruhi oleh letak...",
+    "options": ["Astronomis", "Maritim", "Geologis", "Klimatologis"],
+    "answer": "Geologis"
+  },
+  {
+    "question": "Orang-orang yang secara sadar melakukan penyesuaian diri terhadap lingkungan dan nilai-nilai masyarakat untuk menjadi bagian dari masyarakat disebut...",
+    "options": ["Individuasi", "Adaptasi", "Akomodasi", "Internalisasi"],
+    "answer": "Adaptasi"
+  },
+  {
+    "question": "Proses interaksi sosial yang ditandai dengan upaya mengurangi perbedaan antara individu atau kelompok untuk mencapai kesepakatan disebut...",
+    "options": ["Kontravensi", "Akomodasi", "Konflik", "Oposisi"],
+    "answer": "Akomodasi"
+  },
+  {
+    "question": "Proses pencampuran dua kebudayaan atau lebih yang saling bertemu dan memengaruhi, namun ciri khas kebudayaan asli masih terlihat, disebut...",
+    "options": ["Asimilasi", "Akulturasi", "Difusi", "Inovasi"],
+    "answer": "Akulturasi"
+  },
+  {
+    "question": "Periode sejarah di mana manusia purba belum mengenal tulisan disebut masa...",
+    "options": ["Masa Sejarah", "Masa Praaksara", "Masa Modern", "Masa Klasik"],
+    "answer": "Masa Praaksara"
+  },
+  {
+    "question": "Kegiatan ekonomi yang bertujuan mengurangi atau menghabiskan nilai guna suatu barang dan jasa disebut...",
+    "options": ["Produksi", "Distribusi", "Konsumsi", "Investasi"],
+    "answer": "Konsumsi"
+  },
+  {
+    "question": "Faktor geografis Indonesia yang terletak di antara dua benua dan dua samudra menyebabkan Indonesia dijuluki sebagai jalur perdagangan dan pelayaran...",
+    "options": ["Regional", "Internal", "Internasional", "Lokal"],
+    "answer": "Internasional"
+  },
+  {
+    "question": "Motif non-ekonomi yang mendorong seseorang melakukan kegiatan sosial, seperti menyantuni anak yatim, disebut motif...",
+    "options": ["Mendapatkan laba", "Memperoleh penghargaan", "Meningkatkan kekuasaan", "Berbuat kebajikan"],
+    "answer": "Berbuat kebajikan"
+  },
       { question: "Apa nama pahlawan yang memproklamasikan kemerdekaan Indonesia?", options: ["Soekarno", "Moh. Hatta", "Jenderal Sudirman", "Cut Nyak Dien"], answer: "Soekarno" },
       { question: "Tanggal berapa Indonesia merdeka?", options: ["17 Agustus 1945", "10 November 1945", "20 Mei 1908", "1 Juni 1945"], answer: "17 Agustus 1945" },
       { question: "Siapa wakil presiden pertama Indonesia?", options: ["Moh. Hatta", "Soekarno", "BJ Habibie", "Megawati"], answer: "Moh. Hatta" },
@@ -3337,4 +3487,5 @@ const QUIZ_DATA = {
     }
 
 };
+
 
