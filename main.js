@@ -169,6 +169,9 @@ function checkAnswer(button, selectedOption, correctAnswer) {
 // ==========================================
 // SELESAI KUIS
 // ==========================================
+// ==========================================
+// SELESAI KUIS
+// ==========================================
 async function finishQuiz() {
     try {
         const playerRef = ref(db, "players");
@@ -183,6 +186,66 @@ async function finishQuiz() {
     } catch (error) {
         console.error("Gagal menyimpan ke Firebase:", error);
     }
+
+    document.getElementById('final-player-name').textContent = playerName;
+    document.getElementById('final-score-display').textContent = currentScore;
+    document.getElementById('modal-finish').style.display = 'flex';
+
+    // 🧩 Tambahan: Tampilkan popup sponsor otomatis setelah kuis selesai
+    setTimeout(() => {
+        tampilkanPopupSponsor();
+    }, 4000); // tampil setelah 4 detik (bisa ubah sesuai keinginan)
+}
+
+
+// ==========================================
+// POPUP SPONSOR
+// ==========================================
+function tampilkanPopupSponsor() {
+    // Buat elemen popup
+    const popup = document.createElement('div');
+    popup.id = "popupSponsor";
+    popup.style.cssText = `
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    `;
+
+    const box = document.createElement('div');
+    box.style.cssText = `
+        background: white;
+        padding: 25px;
+        border-radius: 14px;
+        text-align: center;
+        width: 320px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        animation: fadeIn 0.4s ease;
+    `;
+
+    box.innerHTML = `
+        <h2>🎉 Kuis Selesai!</h2>
+        <p>Terima kasih, <b>${playerName}</b>! Skormu sudah tersimpan 🙌</p>
+        <p>💡 Dukung web ini dengan klik sponsor kami:</p>
+        <a href="https://www.effectivegatecpm.com/bnr0fg635?key=cfb6707c978f7894439b33d707495919" 
+           target="_blank"
+           style="display:inline-block; background:#ff9800; color:white; padding:10px 18px; border-radius:8px; text-decoration:none; margin-top:10px;">
+           🔗 Kunjungi Sponsor
+        </a><br>
+        <button onclick="document.getElementById('popupSponsor').remove()" 
+           style="background:#f44336; color:white; border:none; padding:8px 14px; border-radius:6px; margin-top:12px; cursor:pointer;">
+           Tutup
+        </button>
+    `;
+
+    popup.appendChild(box);
+    document.body.appendChild(popup);
+}
+
 
     document.getElementById('final-player-name').textContent = playerName;
     document.getElementById('final-score-display').textContent = currentScore;
@@ -215,5 +278,6 @@ document.getElementById('btn-end-quiz').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     showPage('page-start');
 });
+
 
 
