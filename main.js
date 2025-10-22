@@ -178,26 +178,30 @@ async function finishQuiz() {
         console.error("Gagal menyimpan ke Firebase:", error);
     }
 
+    // 🟢 Tampilkan modal hasil kuis
     document.getElementById('final-player-name').textContent = playerName;
     document.getElementById('final-score-display').textContent = currentScore;
-    document.getElementById('modal-finish').style.display = 'flex';
+    const modal = document.getElementById('modal-finish');
+    modal.style.display = 'flex';
+    modal.classList.add('show');
 }
 
-// ✅ Tombol selesai kuis
+// ==========================================
+// TOMBOL SELESAI & BAGIKAN
+// ==========================================
 document.getElementById('btn-end-quiz').addEventListener('click', () => {
     // Tutup modal hasil
     document.getElementById('modal-finish').style.display = 'none';
     // Kembali ke halaman utama
     showPage('page-start');
-    // Buka sponsor setelah 4 detik
+    // Setelah 2 detik, tampilkan sponsor
     setTimeout(() => {
         window.open(sponsorURL, '_blank');
-    }, 4000);
+    }, 2000);
 });
 
-// ✅ Tombol bagikan ke WhatsApp
 document.getElementById('btn-share-wa').addEventListener('click', () => {
-    const message = `Halo! Saya ${playerName} baru saja menyelesaikan kuis ${currentSubject} tingkat ${playerLevel} dan mendapatkan skor ${currentScore}! Ayo ikutan main di https://hamami-del.github.io/kuis_sd_smp_sma/`;
+    const message = `Halo! Saya ${playerName} baru saja menyelesaikan kuis ${currentSubject} tingkat ${playerLevel} dan mendapatkan skor ${currentScore}! 😄 Ayo ikutan main di https://hamami-del.github.io/kuis_sd_smp_sma/`;
     const waLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
     window.open(waLink, '_blank');
 });
@@ -208,4 +212,3 @@ document.getElementById('btn-share-wa').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     showPage('page-start');
 });
-
