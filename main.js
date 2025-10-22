@@ -193,8 +193,6 @@ document.getElementById('btn-end-quiz').addEventListener('click', () => {
     setTimeout(() => {
         window.open(sponsorURL, '_blank');
     }, 2000); // jeda 2 detik biar modal sempat tampil
-});
-
 
     // 💥 Popup sponsor otomatis setelah selesai
     setTimeout(() => {
@@ -214,5 +212,6 @@ document.getElementById('btn-share-wa').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     showPage('page-start');
 });
+
 
 
